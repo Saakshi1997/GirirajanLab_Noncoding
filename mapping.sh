@@ -5,9 +5,9 @@
 #SBATCH -o /data5/Saakshi/datafiles/logs/noncoding_%a.log
 #SBATCH -e /data5/Saakshi/datafiles/logs/noncoding_%a.err
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=64
+#SBATCH --cpus-per-task=2
 #SBATCH --time=400:0:0
-#SBATCH --mem-per-cpu=25G
+#SBATCH --mem-per-cpu=40G
 #SBATCH --chdir /data5/Saakshi/datafiles
 #SBATCH --exclude ramona,durga
 #SBATCH --array 1-24
