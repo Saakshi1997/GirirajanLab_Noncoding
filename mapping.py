@@ -12,7 +12,7 @@ mapfile = sys.argv[2]
 outfile=sys.argv[3] 
 
 # Load SFARI csv ( contains family IDs and relationship)
-map_df = pd.read_csv(mapfile, delimiter="," , header =0)
+map_df = pd.read_csv(mapfile, delimiter="," , header =0, low_memory=False)
 map_df[["Family Id","Relationship"]] = map_df["SFARI ID"].str.split(".", expand = True)
 
 # Changing the column names for consistency.
